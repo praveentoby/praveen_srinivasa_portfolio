@@ -33,7 +33,7 @@ const skills = [
   {
     title: 'Frontend',
     icon: Code2,
-    items: ['React.js', 'Angular', 'TypeScript', 'JavaScript ES6+', 'Redux', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap', 'Material UI'],
+    items: ['React.js', 'TypeScript', 'JavaScript ES6+', 'Redux', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap', 'Material UI'],
   },
   {
     title: 'Backend',
@@ -56,7 +56,7 @@ const experience = [
   {
     company: 'Skills Outsource Think Pvt Ltd',
     role: 'Full Stack Developer',
-    period: 'Sep 2022 - Jan 2026',
+    period: 'Sep 2021 - Jan 2026',
     points: [
       'Built and maintained full-stack applications with React, TypeScript, NestJS, Node.js, and PostgreSQL.',
       'Modernized legacy Angular modules by rebuilding key product areas in React.',
@@ -67,7 +67,7 @@ const experience = [
   {
     company: 'PHAPA Technologies Pvt Ltd',
     role: 'Full Stack Developer',
-    period: 'Apr 2019 - Aug 2022',
+    period: 'Apr 2019 - Aug 2021',
     points: [
       'Developed web applications with React, PHP, CodeIgniter, MySQL, and REST APIs.',
       'Integrated payment gateways, SMS services, and third-party systems.',
