@@ -24,7 +24,7 @@ const profile = {
   github: 'https://github.com/praveentoby',
   linkedin: 'https://linkedin.com/in/praveen-srinivasa-a74561160',
   resume: '/Praveen_Resume_Updated.pdf',
-  photo: '/profile-photo.jpg',
+  photo: '/file_0000000041a88211b15466e1f5edad86.png',
 };
 
 const navItems = ['About', 'Skills', 'Experience', 'Projects', 'Contact'];
