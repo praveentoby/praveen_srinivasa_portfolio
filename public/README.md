@@ -1,6 +1,3 @@
-Place your profile picture here as `profile-photo.jpg`.
-
-Recommended:
-- Use a square or portrait image.
-- Keep it below 1 MB if possible.
-- File path used by the app: `/profile-photo.jpg`.
+Static assets used by the portfolio:
+- `Praveen_Srinivasa_Resume_V3.pdf` — current downloadable resume
+- `file_0000000041a88211b15466e1f5edad86.png` — supplied profile picture
