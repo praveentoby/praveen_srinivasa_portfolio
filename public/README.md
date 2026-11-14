@@ -1,3 +1,8 @@
-Static assets used by the portfolio:
-- `Praveen_Srinivasa_Resume_V3.pdf` — current downloadable resume
-- `file_0000000041a88211b15466e1f5edad86.png` — supplied profile picture
+# Public assets
+
+- `Praveen_Srinivasa_Resume_V3.2.pdf` — current downloadable resume.
+- `profile-photo.webp` — optimised profile photo used in the hero section.
+- `images/paris-main/` — eight Paris assignment photos displayed directly on the portfolio.
+- `images/paris-gallery/` — twenty-eight additional Paris assignment photos shown in the click-to-open gallery.
+
+The photo assets are WebP to reduce page weight while preserving image proportions.

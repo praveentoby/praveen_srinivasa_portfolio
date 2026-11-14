@@ -14,15 +14,15 @@ const profile = {
   email: 'praveentoby@gmail.com',
   github: 'https://github.com/praveentoby',
   linkedin: 'https://www.linkedin.com/in/praveen-srinivasa-a74561160/',
-  resume: '/Praveen_Srinivasa_Resume_V3.pdf',
-  photo: '/file_0000000041a88211b15466e1f5edad86.png',
+  resume: '/Praveen_Srinivasa_Resume_V3.2.pdf',
+  photo: '/profile-photo.webp',
 };
 
-const navItems = ['About', 'Skills', 'Experience', 'Projects', 'Development', 'Education', 'Contact'];
+const navItems = ['About', 'Skills', 'Experience', 'Projects', 'Paris', 'Development', 'Education', 'Contact'];
 
 const skillGroups = [
   { title: 'Frontend development', icon: Code2, items: ['JavaScript (ES6+)', 'TypeScript', 'React.js', 'Next.js', 'Angular', 'jQuery', 'AJAX', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap', 'Angular Material'] },
-  { title: 'Backend & APIs', icon: Server, items: ['Node.js', 'NestJS', 'PHP', 'CodeIgniter', 'RESTful APIs', 'Microservices'] },
+  { title: 'Backend & APIs', icon: Server, items: ['Node.js', 'NestJS', 'RESTful APIs', 'Microservices'] },
   { title: 'Databases', icon: Database, items: ['PostgreSQL', 'MySQL', 'Database design', 'MySQL views', 'Triggers', 'Stored procedures'] },
   { title: 'Testing & quality', icon: TestTube2, items: ['Jest', 'Unit testing', 'Integration testing', 'CRUD testing', 'Mock objects', 'Test data setup & cleanup'] },
   { title: 'Cloud, delivery & infrastructure', icon: Cloud, items: ['AWS (EC2, S3)', 'Google Cloud Platform', 'Docker', 'Kubernetes', 'GitLab CI/CD', 'ArgoCD'] },
@@ -56,15 +56,15 @@ const experience = [
       'Joined PHAPA after initially contributing to its application through Engage and Encapsulate, where PHAPA was a client; selected for direct employment based on technical contributions, client communication and requirements-handling capabilities.',
       'Worked directly with the project manager to understand business requirements, translate them into technical specifications and break larger requirements into smaller modules and actionable development tasks.',
       'Took ownership of implementing application modules from requirement understanding through development and integration.',
-      'Developed PHP/MySQL RESTful APIs for the Angular web application.',
+      'Built and integrated REST APIs to support the Angular web application and its connected services.',
       'Worked on Razorpay payment gateway integration and third-party services such as SMS gateways.',
       'Worked with MySQL database objects, including views, triggers and stored procedures, and handled database-related issues with guidance from a database expert.',
-      'Coordinated with iClimb Systems, an external Android development team, explaining the existing PHP and Angular application and communicating technical and integration requirements.',
+      'Coordinated with iClimb Systems, an external Android development team, explaining application modules and communicating technical and integration requirements.',
       'Developed and integrated APIs and application modules that enabled the web application to exchange citizen information with Aadhaar services through the external integration, retrieving and displaying returned details.',
       'Recommended former colleagues for the growing development team, helped coordinate an interview and supported their onboarding and transition into the project.',
       'Visited organisational branches to demonstrate application functionality, gather user feedback and resolve reported issues.',
     ],
-    stack: ['PHP', 'CodeIgniter', 'Angular', 'JavaScript', 'MySQL', 'REST APIs', 'Razorpay', 'SMS gateway integration'],
+    stack: ['Angular', 'JavaScript', 'MySQL', 'REST APIs', 'Razorpay', 'SMS gateway integration'],
   },
   {
     company: 'Engage and Encapsulate Softtech Pvt Ltd', role: 'Software Developer / UI & Web Developer', period: '22 August 2018 – 26 April 2019',
@@ -92,8 +92,8 @@ const projects = [
   {
     title: 'PHAPA Membership Program', company: 'PHAPA Technologies', category: 'Membership & social-impact platform',
     description: 'A membership programme connecting workers and communities with essential products, services and opportunities, with a focus on construction, unorganised and migrant workers.',
-    contributions: ['Developed PHP/MySQL APIs for the Angular application.', 'Integrated Razorpay and SMS gateway services.', 'Worked with an external Android team on integration requirements.', 'Integrated application flows to retrieve and display citizen details returned through Aadhaar service integration.', 'Collected feedback and resolved issues during visits to organisational branches.'],
-    tags: ['PHP', 'CodeIgniter', 'Angular', 'MySQL', 'REST APIs', 'Razorpay'],
+    contributions: ['Built and integrated REST APIs for the Angular application.', 'Integrated Razorpay and SMS gateway services.', 'Worked with an external Android team on integration requirements.', 'Integrated application flows to retrieve and display citizen details returned through Aadhaar service integration.', 'Collected feedback and resolved issues during visits to organisational branches.'],
+    tags: ['Angular', 'JavaScript', 'MySQL', 'REST APIs', 'Razorpay'],
   },
   {
     title: 'KBOCWW', company: 'Engage and Encapsulate', category: 'Content management system',
@@ -132,10 +132,10 @@ function Header() {
     <nav className="section-shell flex h-16 items-center justify-between">
       <a href="#home" className="text-lg font-semibold text-white">Praveen<span className="text-accent">.</span></a>
       <div className="hidden items-center gap-5 lg:flex">{navItems.map(item => <a key={item} href={`#${item.toLowerCase()}`} className="text-sm text-slate-300 transition hover:text-white">{item}</a>)}</div>
-      <a href={profile.resume} download="Praveen_Srinivasa_Resume_V3.pdf" className="hidden items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-ink transition hover:bg-teal-300 md:inline-flex"><Download size={16} />Resume</a>
+      <a href={profile.resume} download="Praveen_Srinivasa_Resume_V3.2.pdf" className="hidden items-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-semibold text-ink transition hover:bg-teal-300 md:inline-flex"><Download size={16} />Resume</a>
       <button type="button" className="grid h-10 w-10 place-items-center rounded-full border border-white/10 text-white lg:hidden" onClick={() => setOpen(v => !v)} aria-label="Toggle navigation">{open ? <X size={19} /> : <Menu size={19} />}</button>
     </nav>
-    {open && <div className="section-shell pb-4 lg:hidden"><div className="glass rounded-lg p-3">{navItems.map(item => <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setOpen(false)} className="block rounded-md px-3 py-3 text-sm text-slate-200 hover:bg-white/10">{item}</a>)}<a href={profile.resume} download="Praveen_Srinivasa_Resume_V3.pdf" className="block rounded-md px-3 py-3 text-sm text-accent">Download resume</a></div></div>}
+    {open && <div className="section-shell pb-4 lg:hidden"><div className="glass rounded-lg p-3">{navItems.map(item => <a key={item} href={`#${item.toLowerCase()}`} onClick={() => setOpen(false)} className="block rounded-md px-3 py-3 text-sm text-slate-200 hover:bg-white/10">{item}</a>)}<a href={profile.resume} download="Praveen_Srinivasa_Resume_V3.2.pdf" className="block rounded-md px-3 py-3 text-sm text-accent">Download resume</a></div></div>}
   </header>;
 }
 
@@ -144,11 +144,11 @@ function Hero() {
     <motion.div initial="hidden" animate="show" variants={fadeUp}>
       <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm text-teal-100"><BriefcaseBusiness size={16} />7 years 5 months of professional experience</div>
       <h1 className="max-w-4xl text-4xl font-semibold leading-tight text-white sm:text-6xl lg:text-7xl">Building thoughtful web experiences from interface to backend.</h1>
-      <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">I’m Praveen, a Full Stack Developer with professional experience across React, JavaScript, TypeScript, Node.js, NestJS, PHP and Angular. I enjoy understanding real business needs, turning them into practical software and improving applications as they evolve.</p>
-      <div className="mt-8 flex flex-wrap gap-4"><a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 font-semibold text-ink transition hover:bg-teal-300">Explore my work <ArrowUpRight size={18}/></a><a href={profile.resume} download="Praveen_Srinivasa_Resume_V3.pdf" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 font-semibold text-white transition hover:bg-white/10"><Download size={18}/>Download resume</a></div>
+      <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">I’m Praveen, a Full Stack Developer with professional experience across React, JavaScript, TypeScript, Node.js, NestJS and Angular. I enjoy understanding real business needs, turning them into practical software and improving applications as they evolve.</p>
+      <div className="mt-8 flex flex-wrap gap-4"><a href="#projects" className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 font-semibold text-ink transition hover:bg-teal-300">Explore my work <ArrowUpRight size={18}/></a><a href={profile.resume} download="Praveen_Srinivasa_Resume_V3.2.pdf" className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 font-semibold text-white transition hover:bg-white/10"><Download size={18}/>Download resume</a></div>
       <div className="mt-8 flex flex-wrap gap-3"><a className="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-slate-200 hover:bg-white/10" href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={20}/></a><a className="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-slate-200 hover:bg-white/10" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={20}/></a><a className="grid h-11 w-11 place-items-center rounded-full border border-white/10 text-slate-200 hover:bg-white/10" href={`mailto:${profile.email}`} aria-label="Email"><Mail size={20}/></a><span className="self-center text-sm text-slate-400">{profile.location}</span></div>
     </motion.div>
-    <motion.div initial={{opacity:0,scale:.96}} animate={{opacity:1,scale:1}} transition={{duration:.6,delay:.1}}><div className="glass rounded-lg p-6 shadow-glow"><div className="mb-6 overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]"><img src={profile.photo} alt="Praveen Srinivasa" className="aspect-[4/3] w-full object-cover object-center"/></div><div className="mb-5 flex items-center justify-between gap-3"><div><p className="text-sm text-slate-400">Professional profile</p><h2 className="text-2xl font-semibold text-white">Full Stack Developer</h2></div><span className="rounded-full bg-coral/15 px-3 py-1 text-sm text-rose-100">Available to join</span></div><div className="space-y-3">{[['Frontend','React · Next.js · Angular'],['Backend','Node.js · NestJS · PHP'],['Quality','Jest · Unit & integration tests'],['Delivery','Docker · Kubernetes · CI/CD'],['Cloud','AWS · Google Cloud']].map(([a,b])=><div key={a} className="rounded-lg border border-white/10 bg-black/20 p-3"><p className="text-xs uppercase tracking-wider text-slate-400">{a}</p><p className="mt-1 font-medium text-white">{b}</p></div>)}</div></div></motion.div>
+    <motion.div initial={{opacity:0,scale:.96}} animate={{opacity:1,scale:1}} transition={{duration:.6,delay:.1}}><div className="glass rounded-lg p-6 shadow-glow"><div className="mb-6 overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]"><img src={profile.photo} alt="Praveen Srinivasa" className="aspect-[4/3] w-full object-cover object-center"/></div><div className="mb-5 flex items-center justify-between gap-3"><div><p className="text-sm text-slate-400">Professional profile</p><h2 className="text-2xl font-semibold text-white">Full Stack Developer</h2></div><span className="rounded-full bg-coral/15 px-3 py-1 text-sm text-rose-100">Available to join</span></div><div className="space-y-3">{[['Frontend','React · Next.js · Angular'],['Backend','Node.js · NestJS · REST APIs'],['Quality','Jest · Unit & integration tests'],['Delivery','Docker · Kubernetes · CI/CD'],['Cloud','AWS · Google Cloud']].map(([a,b])=><div key={a} className="rounded-lg border border-white/10 bg-black/20 p-3"><p className="text-xs uppercase tracking-wider text-slate-400">{a}</p><p className="mt-1 font-medium text-white">{b}</p></div>)}</div></div></motion.div>
   </div></section>;
 }
 
@@ -167,6 +167,72 @@ function Experience() {
 
 function Projects() {
   return <section id="projects" className="bg-black/20 py-24"><div className="section-shell"><SectionHeading eyebrow="Selected projects" title="The products and platforms behind my experience">These are professional projects from my employment history. The descriptions focus on the product purpose and the areas I personally contributed to.</SectionHeading><div className="space-y-5">{projects.map((p,i)=><motion.article key={p.title} variants={fadeUp} initial="hidden" whileInView="show" viewport={{once:true}} className="glass rounded-lg p-6 sm:p-8"><div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between"><div><p className="text-sm font-medium text-accent">{p.category}</p><h3 className="mt-1 text-2xl font-semibold text-white">{p.title}</h3><p className="mt-1 text-sm text-slate-400">{p.company}</p></div><span className="w-fit rounded-full border border-white/10 px-3 py-1 text-xs text-slate-300">Project {String(i+1).padStart(2,'0')}</span></div><p className="mt-4 max-w-4xl leading-7 text-slate-300">{p.description}</p><h4 className="mt-5 font-semibold text-white">My contributions</h4><ul className="mt-3 grid gap-2 text-slate-300">{p.contributions.map(c=><li key={c} className="flex gap-3"><span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"/><span className="leading-7">{c}</span></li>)}</ul><div className="mt-5 flex flex-wrap gap-2">{p.tags.map(t=><span className="chip" key={t}>{t}</span>)}</div></motion.article>)}</div></div></section>;
+}
+
+
+const parisMainPhotos = [
+  { src: '/images/paris-main/IMG-20230918-WA0031.webp', alt: 'Team visit near the Eiffel Tower' },
+  { src: '/images/paris-main/IMG-20230925-WA0055.webp', alt: 'Team photo in Paris' },
+  { src: '/images/paris-main/IMG-20230926-WA0012.webp', alt: 'Engineering team collaborating in the Paris office' },
+  { src: '/images/paris-main/PXL_20230920_161819331.MP.webp', alt: 'Believe office building in Paris' },
+  { src: '/images/paris-main/PXL_20230924_115204899.MP.webp', alt: 'Exploring Paris during the business assignment' },
+  { src: '/images/paris-main/PXL_20230927_195456746.MP.webp', alt: 'Team dinner in Paris' },
+  { src: '/images/paris-main/PXL_20230928_161744379.MP.webp', alt: 'Colleagues together at the Paris office' },
+  { src: '/images/paris-main/PXL_20230928_162246261.MP.webp', alt: 'Engineering team group photo' },
+];
+const parisGalleryPhotos = [
+  'IMG-20230918-WA0016.webp','IMG-20230927-WA0009.webp','IMG_0001.webp','IMG_9321.webp','IMG_9433.webp','IMG_9994.webp',
+  'PXL_20230919_101626503.MP.webp','PXL_20230919_104447692.webp','PXL_20230920_161758580.MP.webp','PXL_20230920_171231499.MP.webp',
+  'PXL_20230920_182121154.MP.webp','PXL_20230922_183732855.MP.webp','PXL_20230923_115756606.MP.webp','PXL_20230924_115115889.MP.webp',
+  'PXL_20230924_132913416.MP.webp','PXL_20230926_120353446.MP.webp','PXL_20230927_164447322.MP.webp','PXL_20230927_180151500.MP.webp',
+  'PXL_20230927_180153072.MP.webp','PXL_20230928_065506254.MP.webp','PXL_20230928_105522478.MP.webp','PXL_20230928_162817131.MP.webp',
+  'PXL_20230928_175729299.MP.webp','PXL_20231001_163653212.MP.webp','PXL_20231001_171645381.MP.webp','PXL_20231001_173841961.MP.webp',
+  'PXL_20231001_190043589.MP.webp','PXL_20231003_044821201.MP.webp'
+].map((name) => ({ src: `/images/paris-gallery/${name}`, alt: 'Photo from the Paris business assignment' }));
+
+function ParisAssignment() {
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [activePhoto, setActivePhoto] = useState(null);
+  const closeViewer = () => setActivePhoto(null);
+  return <section id="paris" className="bg-black/20 py-24">
+    <div className="section-shell">
+      <SectionHeading eyebrow="Beyond borders · Paris, France" title="A meaningful chapter of collaboration">From 14 September to 5 October 2022, I joined the Believe engineering team for a 22-day business assignment at the client’s Paris office. Working face-to-face with the French engineering team created space for deeper collaboration, technical exchange and stronger working relationships.</SectionHeading>
+      <div className="grid gap-5 lg:grid-cols-[1.05fr_.95fr]">
+        <article className="glass rounded-lg p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">The collaboration</p>
+          <h3 className="mt-2 text-2xl font-semibold text-white">Engineering without borders</h3>
+          <p className="mt-4 leading-7 text-slate-300">I took part in technical workshops, tool evaluations and discussions around system improvements and application upgrades. The experience brought engineers together to share context, discuss practical solutions and work through priorities as one team.</p>
+          <p className="mt-4 leading-7 text-slate-300">My contributions included UI improvements, investigating application behaviour through Datadog, supporting Argo CD releases, fixing parts of existing campaign automation and restructuring legacy campaign-creation functionality in NestJS.</p>
+          <p className="mt-4 leading-7 text-slate-300">I also helped a new colleague get set up with Node.js on Linux and walked through the application architecture and project workflows, making knowledge-sharing part of the day-to-day collaboration.</p>
+        </article>
+        <article className="glass rounded-lg p-6 sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">What I took away</p>
+          <h3 className="mt-2 text-2xl font-semibold text-white">Confidence through connection</h3>
+          <p className="mt-4 leading-7 text-slate-300">Working alongside people from a different country, language and professional culture helped me appreciate different approaches to communication, teamwork and problem-solving. I learned that meaningful professional relationships grow through openness, humility, curiosity and a willingness to learn.</p>
+          <p className="mt-4 leading-7 text-slate-300">It strengthened my confidence in collaborating with international teams and remains one of the most memorable milestones in my professional journey.</p>
+          <div className="mt-6 flex flex-wrap gap-2">{['Paris office collaboration','Technical workshops','Cross-team knowledge sharing','NestJS modernisation','Team onboarding'].map(x=><span className="chip" key={x}>{x}</span>)}</div>
+          <a href="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7523661521231605760?collapsed=1" target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-accent transition hover:text-teal-200">View LinkedIn recommendation <ArrowUpRight size={17}/></a>
+        </article>
+      </div>
+      <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+        <div><p className="text-sm font-semibold uppercase tracking-wider text-accent">Photo journal</p><h3 className="mt-2 text-2xl font-semibold text-white">A few moments from Paris</h3><p className="mt-2 text-slate-400">The main photos are displayed here. Open the gallery for the rest of the collection.</p></div>
+        <button type="button" onClick={() => setGalleryOpen(true)} className="inline-flex w-fit items-center gap-2 rounded-full bg-accent px-5 py-3 font-semibold text-ink transition hover:bg-teal-300"><span>Explore all 28 gallery photos</span><ArrowUpRight size={18}/></button>
+      </div>
+      <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-4">
+        {parisMainPhotos.map((photo, i) => <button type="button" key={photo.src} onClick={() => setActivePhoto(photo)} className={`group relative overflow-hidden rounded-lg border border-white/10 bg-white/5 text-left ${i===0?'col-span-2 row-span-2':''}`} aria-label={`View photo ${i+1}`}>
+          <img src={photo.src} alt={photo.alt} loading={i<2?'eager':'lazy'} className={`h-full w-full object-cover transition duration-500 group-hover:scale-105 ${i===0?'aspect-[4/3] min-h-64':'aspect-[4/3]'}`}/>
+          <span className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent opacity-70"/>
+          <span className="absolute bottom-3 left-3 rounded-full bg-black/50 px-3 py-1 text-xs text-white backdrop-blur">{i===2||i===6?'Team & office':'Paris moments'}</span>
+        </button>)}
+      </div>
+      {galleryOpen && <div className="fixed inset-0 z-[70] overflow-y-auto bg-slate-950/95 p-4 backdrop-blur-sm sm:p-8" role="dialog" aria-modal="true" aria-label="Paris photo gallery">
+        <div className="mx-auto max-w-6xl"><div className="sticky top-0 z-10 mb-5 flex items-center justify-between gap-4 border-b border-white/10 bg-slate-950/95 py-4"><div><p className="text-sm font-semibold uppercase tracking-wider text-accent">Paris photo gallery</p><h3 className="text-2xl font-semibold text-white">28 moments from the trip</h3></div><button type="button" onClick={() => setGalleryOpen(false)} className="grid h-11 w-11 place-items-center rounded-full border border-white/15 text-white hover:bg-white/10" aria-label="Close gallery"><X/></button></div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">{parisGalleryPhotos.map((photo,i)=><button type="button" key={photo.src} onClick={() => setActivePhoto(photo)} className="group overflow-hidden rounded-lg border border-white/10 bg-white/5"><img src={photo.src} alt={photo.alt} loading="lazy" className="aspect-[4/3] h-full w-full object-cover transition duration-500 group-hover:scale-105"/><span className="sr-only">Open gallery photo {i+1}</span></button>)}</div>
+        </div>
+      </div>}
+      {activePhoto && <div className="fixed inset-0 z-[80] flex items-center justify-center bg-black/95 p-4" role="dialog" aria-modal="true" aria-label="Photo viewer" onClick={closeViewer}><button type="button" onClick={closeViewer} className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full border border-white/20 text-white" aria-label="Close photo"><X/></button><img src={activePhoto.src} alt={activePhoto.alt} onClick={e=>e.stopPropagation()} className="max-h-[88vh] max-w-full rounded-lg object-contain"/></div>}
+    </div>
+  </section>;
 }
 
 function Development() {
@@ -190,5 +256,5 @@ function Contact() {
 }
 
 export default function App() {
-  return <><Header/><main><Hero/><About/><Skills/><Experience/><Projects/><Development/><Education/><GitHubStats/><Contact/></main><footer className="border-t border-white/10 py-7"><div className="section-shell flex flex-col gap-2 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between"><p>© {new Date().getFullYear()} {profile.name}. Built with React, Vite, Tailwind CSS and Framer Motion.</p><a href={`mailto:${profile.email}`} className="hover:text-white">{profile.email}</a></div></footer></>;
+  return <><Header/><main><Hero/><About/><Skills/><Experience/><Projects/><ParisAssignment/><Development/><Education/><GitHubStats/><Contact/></main><footer className="border-t border-white/10 py-7"><div className="section-shell flex flex-col gap-2 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between"><p>© {new Date().getFullYear()} {profile.name}. Built with React, Vite, Tailwind CSS and Framer Motion.</p><a href={`mailto:${profile.email}`} className="hover:text-white">{profile.email}</a></div></footer></>;
 }
